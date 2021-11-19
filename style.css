@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+}
+
+.add-padding {
+  padding: 40px 0;
+}
+.social-media-icons {
+  gap: 20px;
+}
+.social-media-icons i {
+  color: #ccc;
+  font-size: large;
+}
+.social-media-icons i:hover {
+  color: white;
+  font-size: x-large;
+}
+
+.image-section {
+  position: sticky;
+  background-image: url("./images/BenjaminEfenudu.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  border-radius: 20px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  min-height: 500px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  flex-flow: column;
+  padding: 5rem;
+}
+.card .info {
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+.card .info .brand {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 8em;
+  font-weight: 900;
+}
+.card .about-me {
+  color: white;
+}
+.card .about-me .name {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 1.1em;
+}
+.card .about-me .location {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.card .about-me .details {
+  padding: 10px;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.job-item {
+  margin-top: 30px;
+}
+.job-item .job-role-company {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+}
+.job-item .job-role-company .role {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.job-item i {
+  font-size: 30px;
+}
+.job-item .company {
+  margin: auto 0;
+}
+.job-item .label {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+/* ENQUIRIES */
+.enquiries i {
+  color: #8192a2;
+}
+
+/* FOOTER */
+.footer {
+  background: #212529;
+  color: #ffffff8c;
+}
+.footer a {
+  color: #ffffff8c;
+  text-decoration: none;
+}
+.footer a:hover,
+.footer a:active {
+  color: #ffffffcc;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 0px) and (max-width: 1023.95px) {
+  .job-item .job-role-company {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .job-item .job-role-company .role {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .job-item .job-role-company {
+    flex-direction: row;
+    justify-content: start;
+  }
+  .job-item .job-role-company .role {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding-right: 20px;
+  }
+  .job-item .company {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+}
