@@ -22,8 +22,8 @@
   </head>
   <body>
     <!-- HEADER SECTION -->
-    <header class="shadow">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4 py-lg-5">
+    <header></header>
+      <nav class="navbar shadow navbar-expand-lg navbar-dark bg-dark py-4 py-lg-5">
         <div class="container">
           <a class="navbar-brand pe-5" href="#">BENJAMIN EFENUDU</a>
           <button
@@ -43,13 +43,13 @@
                 <a class="nav-link" href="#">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT</a>
+                <a class="nav-link" href="#about">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">PROJECT</a>
+                <a class="nav-link" href="#experience">EXPERIENCE</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT</a>
+                <a class="nav-link" href="#contact">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -74,12 +74,12 @@
           </div>
         </div>
       </nav>
-    </header>
+    
 
     <!-- IMAGE-SECTION -->
-    <div class="image-section">
+    <div class="image-section" id="about">
       <div class="container py-3 py-lg-5">
-        <div class="card">
+        <div class="card" >
           <div class="info">
             <p class="brand d-none d-lg-block">EWOSOFT</p>
           </div>
@@ -95,8 +95,8 @@
                 with special interest in next-generation digital technologies,
                 fintech and sustainable energy.
               </p>
-
-              <div class="experience">
+              
+              <div class="experience" id="experience">
                 <h2>Experience</h2>
 
                 <!-- JOB ITEM 1 -->
@@ -175,10 +175,11 @@
     </div>
 
     <!-- ENQUIRIES -->
-    <div class="enquiries py-4 py-lg-5">
+    <div class="enquiries py-4 py-lg-5" id="contact">
       <div class="container">
         <div class="got-enquiries mb-3"><h1>GOT ENQUIRIES?</h1></div>
-        <form>
+        <!-- FORM -->
+        <form class="needs-validation" id="form" novalidate>
           <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
             <!-- FULL NAME -->
             <div class="col">
@@ -188,12 +189,14 @@
                 ></span>
                 <input
                   type="text"
+                  name="fullname"
                   class="form-control"
                   placeholder="Full Name"
                   aria-label="Full Name"
                   aria-describedby="basic-addon2"
                   required
                 />
+                <div class="valid-feedback">Looks good!</div>
               </div>
             </div>
             <!-- EMAIL -->
@@ -204,12 +207,14 @@
                 ></span>
                 <input
                   type="email"
+                  name="email"
                   class="form-control"
                   placeholder="E-mail"
                   aria-label="Email"
                   aria-describedby="basic-addon2"
                   required
                 />
+                <div class="invalid-feedback">Please provide your email.</div>
               </div>
             </div>
           </div>
@@ -220,14 +225,16 @@
             ></span>
             <input
               type="text"
+              name="location"
               class="form-control"
               placeholder="Location"
               aria-label="Location"
               aria-describedby="basic-addon2"
               required
             />
+            <div class="invalid-feedback">Please provide a valid city.</div>
           </div>
-
+          <!-- GENDER -->
           <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
             <div class="col mb-3 my-auto">
               <!-- GENDER RADIO BUTTON -->
@@ -239,8 +246,9 @@
                     name="gender"
                     id="male"
                     value="male"
+                    required
                   />
-                  <label class="form-check-label" for="male"> Male </label>
+                  <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input
@@ -249,9 +257,9 @@
                     name="gender"
                     id="female"
                     value="female"
-                    checked
+                    required
                   />
-                  <label class="form-check-label" for="female"> Female </label>
+                  <label class="form-check-label" for="female">Female</label>
                 </div>
               </div>
             </div>
@@ -264,11 +272,15 @@
                 <input
                   type="tel"
                   class="form-control"
+                  name="phoneNumber"
                   placeholder="Phone Number"
                   aria-label="Phone Number"
                   aria-describedby="basic-addon2"
                   required
                 />
+                <div class="invalid-feedback">
+                  Please provide your phone number.
+                </div>
               </div>
             </div>
           </div>
@@ -279,15 +291,89 @@
             ></span>
             <textarea
               class="form-control"
+              name="enquiry"
               placeholder="Write your enquiries..."
               aria-label="With textarea"
               rows="5"
               required
+              onfocus="enableSubmitButton(event);"
             ></textarea>
+            <div class="invalid-feedback">Please enter your enquiry.</div>
           </div>
           <!-- SUBMIT BUTTON -->
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <!-- Button triggers modal -->
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="submit_button"
+            disabled
+          >
+            Submit
+          </button>
         </form>
+
+        <!-- MODAL -->
+        <div
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Your Enquiry</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <!-- MODAL CONTENTS -->
+              <div class="modal-body" id="modalContent">
+                <div class="modal-item">
+                  <h6>Full Name</h6>
+                  <p id="modal_fullname"></p>
+                </div>
+                <div class="modal-item">
+                  <h6>Email</h6>
+                  <p id="modal_email"></p>
+                </div>
+                <div class="modal-item">
+                  <h6>Location</h6>
+                  <p id="modal_location"></p>
+                </div>
+                <div class="modal-item">
+                  <h6>Gender</h6>
+                  <p id="modal_gender"></p>
+                </div>
+                <div class="modal-item">
+                  <h6>Phone Number</h6>
+                  <p id="modal_phoneNumber"></p>
+                </div>
+                <div class="modal-item">
+                  <h6>Enquiries</h6>
+                  <p id="modal_enquiries"></p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" onclick="submitEnquiry()" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -306,7 +392,7 @@
           <div class="d-inline-block pe-3 py-1 py-sm-0">
             <div class="col d-flex align-items-center justify-content-center">
               <i class="bi bi-envelope-fill pe-2"></i>
-              <a href="mailto:benjaminefenudu@gmail.com">Email me?</a>
+              <a href="mailto:benjaminefenudu@gmail.com">Email me</a>
             </div>
           </div>
           <div class="d-inline-block pe-3 py-1 py-sm-0">
@@ -341,7 +427,7 @@
     <script type="text/javascript" src="vanilla-tilt.js"></script>
 
     <!-- Disable vanilla tilt for screen < 1024px -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       function myFunction(x) {
         if (x.matches) {
           // If media query matches
@@ -358,7 +444,10 @@
       var x = window.matchMedia("(min-width: 1024px)");
       myFunction(x); // Call listener function at run time
       x.addListener(myFunction); // Attach listener function on state changes
-    </script>
-    <!-- Your own JavaScript -->
+    </script> -->
+    <!-- My own JavaScript -->
+    <script src="./index.js"></script>
   </body>
 </html>
+
+
