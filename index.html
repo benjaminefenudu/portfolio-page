@@ -23,63 +23,64 @@
   <body>
     <!-- HEADER SECTION -->
     <header></header>
-      <nav class="navbar shadow navbar-expand-lg navbar-dark bg-dark py-4 py-lg-5">
-        <div class="container">
-          <a class="navbar-brand pe-5" href="#">BENJAMIN EFENUDU</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">ABOUT</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#experience">EXPERIENCE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-          <!-- SOCIAL MEDIA ICON LINKS -->
-          <div class="social-media-icons d-none d-lg-flex align-items-center">
-            <a href="https://www.linkedin.com/in/benjaminefenudu/"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a href="https://www.twitter.com/benjaminefenudu/"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a href="#https://www.facebook.com/Ewosoft"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com/ewosofthinglyhot/"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="mailto:benjaminefenudu@gmail.com"
-              ><i class="bi bi-envelope-fill"></i
-            ></a>
-            <a href="tel:0810-4455-856"><i class="bi bi-telephone-fill"></i></a>
-          </div>
+    <nav
+      class="navbar shadow navbar-expand-lg navbar-dark bg-dark py-4 py-lg-5"
+    >
+      <div class="container">
+        <a class="navbar-brand pe-5" href="#">BENJAMIN EFENUDU</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">EXPERIENCE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    
+        <!-- SOCIAL MEDIA ICON LINKS -->
+        <div class="social-media-icons d-none d-lg-flex align-items-center">
+          <a href="https://www.linkedin.com/in/benjaminefenudu/"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://www.twitter.com/benjaminefenudu/"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a href="#https://www.facebook.com/Ewosoft"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/ewosofthinglyhot/"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="mailto:benjaminefenudu@gmail.com"
+            ><i class="bi bi-envelope-fill"></i
+          ></a>
+          <a href="tel:0810-4455-856"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+    </nav>
 
     <!-- IMAGE-SECTION -->
     <div class="image-section" id="about">
       <div class="container py-3 py-lg-5">
-        <div class="card" >
+        <div class="card">
           <div class="info">
             <p class="brand d-none d-lg-block">EWOSOFT</p>
           </div>
@@ -95,7 +96,7 @@
                 with special interest in next-generation digital technologies,
                 fintech and sustainable energy.
               </p>
-              
+
               <div class="experience" id="experience">
                 <h2>Experience</h2>
 
@@ -180,126 +181,136 @@
         <div class="got-enquiries mb-3"><h1>GOT ENQUIRIES?</h1></div>
         <!-- FORM -->
         <form class="needs-validation" id="form" novalidate>
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
-            <!-- FULL NAME -->
-            <div class="col">
+          <div class="row">
+            <!-- LEFT OR TOP COLUMN -->
+            <div class="col-12 col-lg-6">
+              <!-- FULL NAME -->
+              <div class="col">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="bi bi-person-fill"></i
+                  ></span>
+                  <input
+                    type="text"
+                    name="fullname"
+                    class="form-control"
+                    placeholder="Full Name"
+                    aria-label="Full Name"
+                    aria-describedby="basic-addon2"
+                    required
+                  />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+              </div>
+              <!-- EMAIL -->
+              <div class="col">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="bi bi-envelope-fill"></i
+                  ></span>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="E-mail"
+                    aria-label="Email"
+                    aria-describedby="basic-addon2"
+                    required
+                  />
+                  <div class="invalid-feedback">Please provide your email.</div>
+                </div>
+              </div>
+              <!-- LOCATION -->
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"
-                  ><i class="bi bi-person-fill"></i
+                  ><i class="bi bi-geo-alt-fill"></i
                 ></span>
                 <input
                   type="text"
-                  name="fullname"
+                  name="location"
                   class="form-control"
-                  placeholder="Full Name"
-                  aria-label="Full Name"
+                  placeholder="Location"
+                  aria-label="Location"
                   aria-describedby="basic-addon2"
                   required
                 />
-                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid city.</div>
               </div>
-            </div>
-            <!-- EMAIL -->
-            <div class="col">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"
-                  ><i class="bi bi-envelope-fill"></i
-                ></span>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  placeholder="E-mail"
-                  aria-label="Email"
-                  aria-describedby="basic-addon2"
-                  required
-                />
-                <div class="invalid-feedback">Please provide your email.</div>
-              </div>
-            </div>
-          </div>
-          <!-- LOCATION -->
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1"
-              ><i class="bi bi-geo-alt-fill"></i
-            ></span>
-            <input
-              type="text"
-              name="location"
-              class="form-control"
-              placeholder="Location"
-              aria-label="Location"
-              aria-describedby="basic-addon2"
-              required
-            />
-            <div class="invalid-feedback">Please provide a valid city.</div>
-          </div>
-          <!-- GENDER -->
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
-            <div class="col mb-3 my-auto">
-              <!-- GENDER RADIO BUTTON -->
-              <div class="gender-radio-buttons">
-                <div class="form-check form-check-inline">
+              <!-- PHONE NUMBER -->
+              <div class="col">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="bi bi-telephone-fill"></i
+                  ></span>
                   <input
-                    class="form-check-input"
-                    type="radio"
-                    name="gender"
-                    id="male"
-                    value="male"
+                    type="tel"
+                    class="form-control"
+                    name="phoneNumber"
+                    placeholder="Phone Number"
+                    aria-label="Phone Number"
+                    aria-describedby="basic-addon2"
                     required
                   />
-                  <label class="form-check-label" for="male">Male</label>
+                  <div class="invalid-feedback">
+                    Please provide your phone number.
+                  </div>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    value="female"
-                    required
-                  />
-                  <label class="form-check-label" for="female">Female</label>
+              </div>
+              <!-- GENDER -->
+              <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2">
+                <div class="col mb-3 my-auto">
+                  <!-- GENDER RADIO BUTTON -->
+                  <div class="gender-radio-buttons">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                        required
+                      />
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                        required
+                      />
+                      <label class="form-check-label" for="female"
+                        >Female</label
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- PHONE NUMBER -->
-            <div class="col">
+
+            <!-- RIGHT OR BOTTOM COLUMN -->
+            <div class="col-12 col-lg-6">
+              <!-- ENQUIRY MESSAGE -->
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"
-                  ><i class="bi bi-telephone-fill"></i
+                <span class="input-group-text"
+                  ><i class="bi bi-patch-question-fill"></i
                 ></span>
-                <input
-                  type="tel"
+                <textarea
                   class="form-control"
-                  name="phoneNumber"
-                  placeholder="Phone Number"
-                  aria-label="Phone Number"
-                  aria-describedby="basic-addon2"
+                  name="enquiry"
+                  placeholder="Write your enquiries..."
+                  aria-label="With textarea"
+                  rows="8"
                   required
-                />
-                <div class="invalid-feedback">
-                  Please provide your phone number.
-                </div>
+                  onfocus="enableSubmitButton(event);"
+                ></textarea>
+                <div class="invalid-feedback">Please enter your enquiry.</div>
               </div>
             </div>
           </div>
-          <!-- ENQUIRY MESSAGE -->
-          <div class="input-group mb-3">
-            <span class="input-group-text"
-              ><i class="bi bi-patch-question-fill"></i
-            ></span>
-            <textarea
-              class="form-control"
-              name="enquiry"
-              placeholder="Write your enquiries..."
-              aria-label="With textarea"
-              rows="5"
-              required
-              onfocus="enableSubmitButton(event);"
-            ></textarea>
-            <div class="invalid-feedback">Please enter your enquiry.</div>
-          </div>
+
           <!-- SUBMIT BUTTON -->
           <!-- Button triggers modal -->
           <button
@@ -322,7 +333,9 @@
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+          >
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Your Enquiry</h5>
@@ -369,7 +382,13 @@
                 >
                   Close
                 </button>
-                <button type="button" onclick="submitEnquiry()" class="btn btn-primary">Submit</button>
+                <button
+                  type="button"
+                  onclick="submitEnquiry()"
+                  class="btn btn-primary"
+                >
+                  Submit
+                </button>
               </div>
             </div>
           </div>
@@ -449,5 +468,3 @@
     <script src="./index.js"></script>
   </body>
 </html>
-
-
